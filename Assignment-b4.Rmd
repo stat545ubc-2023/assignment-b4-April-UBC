@@ -1,0 +1,102 @@
+---
+title: "Assignment-b4"
+author: "April Hwang"
+date: "2023-11-28"
+output: html_document
+---
+
+# Setup
+```{r}
+library(janeaustenr)
+library(stringr)
+library(tidytext)
+library(stopwords)
+library(ggplot2)
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(dplyr))
+```
+
+<br>
+
+# Exercise 1 (37.5 points)
+For this exercise, I will take the book _Emma_ from the `janeaustenr` package and make a plot of the most common words in the book. I will be removing stop words using the `stopwords` package.
+
+Link to the `stopwords` package is available here: https://github.com/quanteda/stopwords
+
+## One-row-per-line format
+```{r}
+original_books <- austen_books() %>%
+  group_by(book) %>%
+  mutate(line = row_number(),
+         chapter = cumsum(str_detect(text, regex("^chapter [\\divxlc]",
+                                                 ignore_case = TRUE)))) %>%
+  ungroup()
+
+original_books
+```
+
+
+## One-token-per-row format
+```{r}
+tidy_books <- original_books %>%
+  unnest_tokens(output = word, input = text)
+
+tidy_books
+```
+
+
+## Remove stop words
+```{r}
+cleaned_books <- tidy_books %>%
+  anti_join(get_stopwords())
+
+cleaned_books
+```
+
+## Select _Emma_
+```{r}
+em <- cleaned_books %>%
+  filter(book == 'Emma')
+
+em
+```
+
+
+## Count words
+```{r}
+common_words <- em %>%
+  count(word, sort = TRUE) 
+
+common_words
+```
+
+
+## Plot top ten most common words from _Emma_
+
+```{r}
+plot <- common_words %>%
+  slice_max(n, n = 10) %>%
+  ggplot(aes(x = word, y = n)) +
+    geom_point()
+
+plot
+```
+
+<br>
+
+# Exercise 2 (37.5 points)
+
+Make a function that converts words to your own version of Pig Latin.
+
+The specific input and output that you decide upon is up to you. Don’t forget to implement good function-making hygiene: we’ll be looking for (unrendered) roxygen2-style documentation (being sure to describe your Pig Latin conversion), examples of applying the function, 3 non-redundant tests, appropriate use of arguments, and appropriate amount of checking for proper input.
+
+Your Pig Latin should incorporate two components:
+
+Rearrangement component
+
+The default Pig Latin rearrangement rule, as per Wikipedia, moves beginning letters to the end. Modify this somehow. Maybe you move letters from the end to the beginning, or you change the rules altogether, keeping a similar level of complexity.
+
+Addition component
+
+The default Pig Latin addition rule is to add “ay” to the end of the word, after rearranging the letters of the word. You should choose some other addition rule.
+
