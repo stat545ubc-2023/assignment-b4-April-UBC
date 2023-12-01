@@ -88,7 +88,7 @@ plot
 
 # Exercise 2 (37.5 points)
 
-For this exercise, I will make a function called `bunny_latin` that converts words to my own version of Pig Latin.
+For this exercise, I will make a function called `bunnylatin` that converts words to my own version of Pig Latin.
 
 For the rearrangement component, I will move the last two letters from the end to the beginning. For the addition component, I will add the last letter to the end of the word following the rearrangement. For example, if the word is 'apple', it will first rearrange the word by moving the last two letters to the beginning ('leapp'), then add the last letter to the end of the word ('leappp')
 
