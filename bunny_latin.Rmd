@@ -112,7 +112,7 @@ The specific input and output that you decide upon is up to you. Don’t forget 
 
 
 ```{r}
-bunny_latin <- function(x) {
+bunnylatin <- function(x) {
   last_two <- str_sub(x, -2, -1) 
   first <- str_sub(x, 1, -3)
   last_letter <- str_sub(first, -1) 
