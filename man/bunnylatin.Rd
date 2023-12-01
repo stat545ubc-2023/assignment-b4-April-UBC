@@ -2,7 +2,7 @@
 % Please edit documentation in R/bunnylatin.R
 \name{bunnylatin}
 \alias{bunnylatin}
-\title{Bunny Latin will move the last two letters of the word to the front, then repeat the last letter of the newly modified word once at the end.}
+\title{Bunny Latin}
 \usage{
 bunnylatin(x)
 }
@@ -10,7 +10,7 @@ bunnylatin(x)
 \item{x}{A string, or strings}
 }
 \value{
-A modified string, according to Bunny Latin Rules
+A modified string, according to the Bunny Latin Rules
 }
 \description{
 Bunny Latin will move the last two letters of the word to the front, then repeat the last letter of the newly modified word once at the end.

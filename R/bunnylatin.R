@@ -1,3 +1,4 @@
+#' Bunny Latin
 #' Bunny Latin will move the last two letters of the word to the front, then repeat the last letter of the newly modified word once at the end.
 #'
 #' @param x A string, or strings

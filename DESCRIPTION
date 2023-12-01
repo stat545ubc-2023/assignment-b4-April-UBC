@@ -3,6 +3,7 @@ Title: Bunny Latin: A Variation of Pig Latin
 Version: 0.1.0
 Authors@R: 
     person("April", "Hwang", , "april.hwang@ubc.ca", role = c("aut", "cre"))
+Imports: tidyverse
 Description: Function which converts words into Bunny Latin, a variation of Pig Latin.
 License: MIT + file LICENSE
 Encoding: UTF-8
