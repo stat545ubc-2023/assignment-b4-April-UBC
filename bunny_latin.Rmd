@@ -17,6 +17,8 @@ suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(dplyr))
 ```
 
+test
+
 <br>
 
 # Exercise 1 (37.5 points)
