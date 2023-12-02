@@ -114,12 +114,12 @@ The specific input and output that you decide upon is up to you. Don’t forget 
 
 ```{r}
 bunnylatin <- function(x) {
-  stopifnot('Too short! Word must have at least three letters.' =
-              str_length(x) >2)
-  last_two <- str_sub(x, -2, -1)
-  first <- str_sub(x, 1, -3)
-  last_letter <- str_sub(first, -1)
-  str_c(last_two, first, last_letter)
+  stopifnot('Too short! String length must be equal to or greater than three.' =
+              stringr::str_length(x) >2)
+  last_two <- stringr::str_sub(x, -2, -1)
+  first <- stringr::str_sub(x, 1, -3)
+  last_letter <- stringr::str_sub(first, -1)
+  stringr::str_c(last_two, first, last_letter)
 }
 ```
 
