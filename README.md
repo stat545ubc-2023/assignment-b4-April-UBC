@@ -46,6 +46,3 @@ bunnylatin('12345')
 bunnylatin(c('summer', 'sunshine', 'puppy'))
 #> [1] "ersummm"   "nesunshii" "pypupp"
 ```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
