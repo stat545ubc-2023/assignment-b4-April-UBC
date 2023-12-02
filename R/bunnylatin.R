@@ -1,8 +1,8 @@
 #' bunnylatin
 #'
-#' `bunnylatin` will move the last two letters of the word to the front, then repeat the last letter of the newly modified word once at the end.
+#' `bunnylatin` will move the last two letters of the word to the front, then repeat the last letter of the newly modified word once at the end. Word(s) must contain at least three letters.
 #'
-#' @param x A string, or a character vector.
+#' @param x A string, or a character vector which contains at least three characters.
 #'
 #' @return A modified string or character vector, according to the Bunny Latin Rules.
 #' @export
@@ -20,6 +20,8 @@
 #'
 #'
 bunnylatin <- function(x) {
+  stopifnot('Too short! Word must have at least three letters.' =
+              str_length(x) >2)
   last_two <- str_sub(x, -2, -1)
   first <- str_sub(x, 1, -3)
   last_letter <- str_sub(first, -1)
