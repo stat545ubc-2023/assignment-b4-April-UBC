@@ -6,7 +6,9 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of bunnylatin is to …
+The purpose of `bunnylatin` is to make a variation of Pig Latin. It
+allows users to conveniently convert a string or vector into Bunny
+Latin.
 
 ## Installation
 
@@ -15,7 +17,7 @@ You can install the development version of bunnylatin from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("stat545ubc-2023/assignment-b4-April-UBC")
+devtools::install_github("stat545ubc-2023/bunnylatin")
 ```
 
 ## Example
