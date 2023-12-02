@@ -7,13 +7,13 @@
 bunnylatin(x)
 }
 \arguments{
-\item{x}{A string, or a character vector. String length must be equal to or greater than three.}
+\item{x}{A string or vector. Each string length must be equal to or greater than three.}
 }
 \value{
-A modified string or character vector, according to the Bunny Latin Rules.
+A modified string or vector, according to the Bunny Latin Rules.
 }
 \description{
-\code{bunnylatin} will move the last two letters of the word to the front, then repeat the last letter of the newly modified word once at the end. String length must be equal to or greater than three.
+\code{bunnylatin} will move the last two letters of the word to the front, then repeat the last letter of the newly modified word once at the end.
 }
 \examples{
 bunnylatin('apple')
