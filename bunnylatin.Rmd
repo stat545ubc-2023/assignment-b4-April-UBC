@@ -91,25 +91,9 @@ plot
 
 For this exercise, I will make a function called `bunnylatin` that converts words to my own version of Pig Latin.
 
-For the rearrangement component, I will move the last two letters from the end to the beginning. For the addition component, I will add the last letter to the end of the word following the rearrangement. For example, if the word is 'apple', it will first rearrange the word by moving the last two letters to the beginning ('leapp'), then add the last letter to the end of the word ('leappp')
+For the rearrangement component, I will move the last two letters from the end to the beginning. For the addition component, I will repeat the last letter to the end of the word following the rearrangement. For example, if the word is 'apple', it will first rearrange the word by moving the last two letters to the beginning ('leapp'), then repeat the last letter at the end of the word ('leappp')
 
-
-The specific input and output that you decide upon is up to you. Don’t forget to implement good function-making hygiene: we’ll be looking for (unrendered) roxygen2-style documentation (being sure to describe your Pig Latin conversion), examples of applying the function, 3 non-redundant tests, appropriate use of arguments, and appropriate amount of checking for proper input.
-
-```{r}
-#take last two letters of word
-#last_two <- str_sub(words, -2, -1)
-
-#word minus last two letters
-#first <- str_sub(words, 1, -3)
-
-#last letter of word
-#last_letter <- str_sub(first, -1)
-
-#bunny latin
-#bunny_latin <- str_c(last_two, first, last_letter)
-```
-
+The input of Bunny Latin must be a string or a vector. Each string length must be equal to or greater than three. 
 
 
 ```{r}

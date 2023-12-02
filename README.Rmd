@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of bunnylatin is to ...
+The purpose of `bunnylatin` is to make a variation of Pig Latin. It allows users to conveniently convert a string or vector into Bunny Latin. 
 
 ## Installation
 

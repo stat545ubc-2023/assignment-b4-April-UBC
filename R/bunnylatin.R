@@ -1,10 +1,10 @@
 #' bunnylatin
 #'
-#' `bunnylatin` will move the last two letters of the word to the front, then repeat the last letter of the newly modified word once at the end. String length must be equal to or greater than three.
+#' `bunnylatin` will move the last two letters of the word to the front, then repeat the last letter of the newly modified word once at the end.
 #'
-#' @param x A string, or a character vector. String length must be equal to or greater than three.
+#' @param x A string or vector. Each string length must be equal to or greater than three.
 #'
-#' @return A modified string or character vector, according to the Bunny Latin Rules.
+#' @return A modified string or vector, according to the Bunny Latin Rules.
 #' @export
 #'
 #' @examples
