@@ -3,9 +3,15 @@ Title: Bunny Latin: A Variation of Pig Latin
 Version: 0.1.0
 Authors@R: 
     person("April", "Hwang", , "april.hwang@ubc.ca", role = c("aut", "cre"))
-Imports: tidyverse
 Description: Function which converts words into Bunny Latin, a variation of Pig Latin.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+Imports: 
+    stringr
+Remotes:
+    hadley/stringr
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

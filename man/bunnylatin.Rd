@@ -2,23 +2,26 @@
 % Please edit documentation in R/bunnylatin.R
 \name{bunnylatin}
 \alias{bunnylatin}
-\title{Bunny Latin}
+\title{bunnylatin}
 \usage{
 bunnylatin(x)
 }
 \arguments{
-\item{x}{A string, or strings}
+\item{x}{A string, or a character vector.}
 }
 \value{
-A modified string, according to the Bunny Latin Rules
+A modified string or character vector, according to the Bunny Latin Rules.
 }
 \description{
-Bunny Latin will move the last two letters of the word to the front, then repeat the last letter of the newly modified word once at the end.
+\code{bunnylatin} will move the last two letters of the word to the front, then repeat the last letter of the newly modified word once at the end.
 }
 \examples{
 bunnylatin('apple')
 
+bunnylatin('12345')
+
 x <- c('summer', 'sunshine', 'puppy')
 bunnylatin(x)
+
 
 }
