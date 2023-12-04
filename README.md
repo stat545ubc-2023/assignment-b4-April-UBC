@@ -25,7 +25,8 @@ devtools::install_github("stat545ubc-2023/bunnylatin")
 You can use `bunnylatin` to easily manipulate a string or a vector
 according to the Bunny Latin rules. It will move the last two letters of
 the word to the front, then repeat the last letter of the newly modified
-word once at the end.
+word once at the end. The input of must be a string or a vector. Each
+string length must be equal to or greater than three.
 
 ## Example
 

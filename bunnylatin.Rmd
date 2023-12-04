@@ -19,7 +19,6 @@ suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(dplyr))
 ```
 
-
 <br>
 
 # Exercise 1 (37.5 points)
@@ -31,14 +30,14 @@ Link to the `stopwords` package is available here: https://github.com/quanteda/s
 
 ```{r}
 #one-row-per-line format, annotate line numbers and chapters
-original_books <- austen_books() %>%
+row_per_line <- austen_books() %>%
   group_by(book) %>%
   mutate(linenumber = row_number(),
          chapter = cumsum(str_detect(text, regex("^chapter [\\divxlc]",
                                                  ignore_case = TRUE)))) %>%
   ungroup()
 
-original_books
+row_per_line
 ```
 
 
@@ -46,24 +45,24 @@ original_books
 
 ```{r}
 #use unnest_tokens()
-tidy_books <- original_books %>%
+token_per_row <- row_per_line %>%
   unnest_tokens(word, text)
 
-tidy_books
+token_per_row
 ```
 
 
 ## Remove stop words
 ```{r}
-cleaned_books <- tidy_books %>%
+stop_words_removed <- token_per_row %>%
   anti_join(get_stopwords())
 
-cleaned_books
+stop_words_removed
 ```
 
 ## Select _Emma_
 ```{r}
-em <- cleaned_books %>%
+em <- stop_words_removed %>%
   filter(book == 'Emma')
 
 em
@@ -80,15 +79,14 @@ common_words
 
 
 ## Plot top ten most common words from _Emma_
-
 ```{r}
-plot <- common_words %>%
+plot_em <- common_words %>%
   slice_max(n, n = 10) %>%
   mutate(word = reorder(word, n)) %>%
   ggplot(aes(x = word, y = n)) +
     geom_point()
 
-plot
+plot_em
 ```
 
 <br>
@@ -99,7 +97,7 @@ For this exercise, I will make a function called `bunnylatin` that converts word
 
 For the rearrangement component, I will move the last two letters from the end to the beginning. For the addition component, I will repeat the last letter to the end of the word following the rearrangement. For example, if the word is 'apple', it will first rearrange the word by moving the last two letters to the beginning ('leapp'), then repeat the last letter at the end of the word ('leappp')
 
-The input of Bunny Latin must be a string or a vector. Each string length must be equal to or greater than three. 
+The input of must be a string or a vector. Each string length must be equal to or greater than three. 
 
 
 ```{r}
