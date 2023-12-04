@@ -9,11 +9,11 @@ from `janeaustenr`. For exercise 2, I made a function called
 `bunnylatin` which converts words into my own version of Pig Latin. More
 information for both exercises are available in *bunnylatin.Rmd*.
 
-## Emma
+## Exercise 1: *Emma*
 
 The aforementioned graph is available in *bunnylatin.Rmd*.
 
-## bunnylatin
+## Exercise 2: `bunnylatin`
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -60,21 +60,25 @@ bunnylatin(c('summer', 'sunshine', 'puppy'))
 #> [1] "ersummm"   "nesunshii" "pypupp"
 ```
 
-## Repo path
+## Repository paths
 
-- **.Rbuildignore** lists the necessary files for `bunnylatin`
-- **.Rdata** and **.Rhistory** are added to make the Git repo for
-  `bunnylatin`
 - **bunnylatin.Rmd** contains outcome of exercise 1 and information
-  regarding exercise 2
-- **bunnylatin.Rproj** makes a directory an RStudio Project
-- **tests** contains **testthat.R** and **testthat** which are required
-  to run the `testthat` package for `bunnylatin`
-- **README.Rmd** and **README.md** create this README file
+  regarding exercise 2.
 - **R** contains **bunnylatin.R** which is used to create `bunnylatin`
-- **NAMESPACE** declares the `bunnylatin` function
+  and documented using roxygen2 tags.
+- **.Rbuildignore** lists the necessary files for `bunnylatin`.
+- **.Rdata** and **.Rhistory** are added to make the Git repo for
+  `bunnylatin`.
+- **bunnylatin.Rproj** makes a directory an RStudio Project.
+- **tests** contains **testthat.R** and **testthat** which are required
+  to run the `testthat` package for `bunnylatin`.
+- **README.Rmd** and **README.md** create this README file.
+- **NAMESPACE** declares the `bunnylatin` function.
 - **LICENSE.md** and **LICENSE** are used to create the license for
-  `bunnylatin`
-- **DESCRIPTION** provides metadata about `bunnylatin`
+  `bunnylatin`.
+- **DESCRIPTION** provides metadata about `bunnylatin`.
 - **.gitignore** communicates with Git to ignore some standard,
-  behind-the-scenes files created by R and RStudio
+  behind-the-scenes files created by R and RStudio.
+- **man** contains a file necessary to generate the graph for exercise 1
+  and a documentation file for `bunnylatin` written in an R-specific
+  markup language.

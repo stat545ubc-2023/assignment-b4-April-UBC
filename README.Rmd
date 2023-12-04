@@ -17,11 +17,11 @@ knitr::opts_chunk$set(
 
 For this assignment, I have chosen option 1, exercise 1 and 2. For exercise 1, I made a graph of the top ten most common words in _Emma_ from `janeaustenr`. For exercise 2, I made a function called `bunnylatin` which converts words into my own version of Pig Latin. More information for both exercises are available in _bunnylatin.Rmd_.
 
-## Emma
+## Exercise 1: _Emma_
 
 The aforementioned graph is available in _bunnylatin.Rmd_.
 
-## bunnylatin
+## Exercise 2: `bunnylatin`
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -58,18 +58,19 @@ bunnylatin('12345')
 bunnylatin(c('summer', 'sunshine', 'puppy'))
 ```
 
-## Repo path
+## Repository paths
 
-* **.Rbuildignore** lists the necessary files for `bunnylatin`
-* **.Rdata** and **.Rhistory** are added to make the Git repo for `bunnylatin`
-* **bunnylatin.Rmd** contains outcome of exercise 1 and information regarding exercise 2
-* **bunnylatin.Rproj** makes a directory an RStudio Project
-* **tests** contains **testthat.R** and **testthat** which are required to run the `testthat` package for `bunnylatin` 
-* **README.Rmd** and **README.md** create this README file
-* **R** contains **bunnylatin.R** which is used to create `bunnylatin`
-* **NAMESPACE** declares the `bunnylatin` function 
-* **LICENSE.md** and **LICENSE** are used to create the license for `bunnylatin`
-* **DESCRIPTION** provides metadata about `bunnylatin`
-* **.gitignore** communicates with Git to ignore some standard, behind-the-scenes files created by R and RStudio
+* **bunnylatin.Rmd** contains outcome of exercise 1 and information regarding exercise 2.
+* **R** contains **bunnylatin.R** which is used to create `bunnylatin` and documented using roxygen2 tags.
+* **.Rbuildignore** lists the necessary files for `bunnylatin`.
+* **.Rdata** and **.Rhistory** are added to make the Git repo for `bunnylatin`.
+* **bunnylatin.Rproj** makes a directory an RStudio Project.
+* **tests** contains **testthat.R** and **testthat** which are required to run the `testthat` package for `bunnylatin`. 
+* **README.Rmd** and **README.md** create this README file.
+* **NAMESPACE** declares the `bunnylatin` function. 
+* **LICENSE.md** and **LICENSE** are used to create the license for `bunnylatin`.
+* **DESCRIPTION** provides metadata about `bunnylatin`.
+* **.gitignore** communicates with Git to ignore some standard, behind-the-scenes files created by R and RStudio.
+* **man** contains a file necessary to generate the graph for exercise 1 and a documentation file for `bunnylatin` written in an R-specific markup language.
 
 
